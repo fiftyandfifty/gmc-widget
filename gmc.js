@@ -121,7 +121,7 @@ try {
           // !!SUCCESS!! callback handler
           request.done(function (response, textStatus, jqXHR){
             // log success message
-            console.log("AJAX Request Status:", textStatus);
+            if ( debug ) console.log("AJAX Request Status:", textStatus);
             // set the gmc_data obj to the response object
             gmc_data = response;
           });
