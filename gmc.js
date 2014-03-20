@@ -183,6 +183,38 @@ try {
           </div>'); 
       }
 
+      
+      /* 280x600
+      ================================================================= */
+      if ( gmc_widget_width == "280" && gmc_widget_height == "600" ) {
+        
+        // set the width/height based on parameters in <script> tag
+        gmc_widget.css({ "width" : "280px", "height" : "600px" });
+
+        // <iframe> content
+        gmc_widget[0].contentWindow.document.write('<div id="gmc_widget">\
+          <header class="gmc_header_medium"></header> \
+          <div class="gmc_widget_inner"> \
+            <div class="gmc_widget_text_content"> ' + _str(gmc_data.site_info.widget_description).replace(/\"/g, "") + ' \
+              <div class="gmc_stat_box medium"><div class="gmc_stat_number">' + _str(gmc_data.numbers.share_number).replace(/\"/g, "") + '</div><span>Actions taken to help every woman and every child lead healthy lives.</span></div> \
+            </div> \
+          </div> \
+          <footer class="gmc_footer_medium"> \
+            <div class="gmc_footer_buttons"> \
+              <a href="' + _str(gmc_data.site_info.todays_post).replace(/\"/g, "") + '" target="_blank" class="gmc_button gmc_todays_post"> \
+                <i class="icon icon-chat"></i> \
+                See Today\'s Post</a> \
+              <a href="' + _str(gmc_data.site_info.learn_more_url).replace(/\"/g, "") + '" target="_blank" class="gmc_button gmc_learn_more"> \
+                <i class="icon icon-info"></i> \
+                ' + _str(gmc_data.site_info.learn_more_text).replace(/\"/g, "") + '</a> \
+              <div style="clear:both;"></div> \
+            </div> \
+            <div class="gmc_notice">* up to $250,000</div> \
+          </footer> \
+          </div>');
+      } 
+
+
       /* 300x600
       ================================================================= */
       if ( gmc_widget_width == "300" && gmc_widget_height == "600" ) {
